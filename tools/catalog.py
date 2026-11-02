@@ -32,8 +32,12 @@ def build(root):
                 continue
             if not file.is_file() or len(relative) > 240 or file.suffix not in EXTENSIONS:
                 raise ValueError('Public resources must be bounded regular text files')
+            if file.stat().st_size > 1_000_000 or len(files) >= 50 or count >= 500:
+                raise ValueError('Resource capacity exceeded')
             data = file.read_bytes()
             size += len(data); total += len(data); count += 1
+            if size > 1_000_000 or total > 10_000_000:
+                raise ValueError('Resource capacity exceeded')
             text = data.decode('utf-8')
             if '\0' in text or SECRET.search(text):
                 raise ValueError('Potential secret or binary data found')
