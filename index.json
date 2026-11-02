@@ -1,4 +1,86 @@
 {
   "schema": 1,
-  "skills": []
+  "skills": [
+    {
+      "id": "arp-https-hack",
+      "revision": "a2f6b4a9433654d8c9c8aa0e08c868e70ff01441502fe03716daa64f235d5568",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "3c5a7f166473008e02aebee2167e8ada513ee581c8850775dbc76e7de91644f5",
+          "bytes": 4952
+        },
+        {
+          "path": "assets/certs/emudhra_dv_g3b.pem.txt",
+          "sha256": "33dd79ddf9b44744f0da18f9709919c16ee2dd5798e8e5cd9b0c2bfc1d93193c",
+          "bytes": 1241
+        },
+        {
+          "path": "assets/certs/emudhra_root.pem.txt",
+          "sha256": "a7f5f86a153884ee266931e5ecb888db90af22109497afe843f788926715f2ae",
+          "bytes": 810
+        },
+        {
+          "path": "references/emudhra.md",
+          "sha256": "154b75cfa553102a9e25f551eb24a21741cd4fe261c957fd183ba41df8afe98f",
+          "bytes": 2272
+        },
+        {
+          "path": "references/future-extensions.md",
+          "sha256": "77b82afdb14904abb7bce50998d696d7bb07975f23017e9f17e320baf14384a4",
+          "bytes": 4319
+        },
+        {
+          "path": "scripts/arp_tool.c.txt",
+          "sha256": "1f47d090206315e09edd19611951f72c63631de408bb57a0b277a49f66432a04",
+          "bytes": 4478
+        },
+        {
+          "path": "scripts/check_env.sh",
+          "sha256": "9a55184c1d6a6ba6ccd6db41ab814eb9d39df98e73c05a65d085933c60fca3f9",
+          "bytes": 578
+        },
+        {
+          "path": "scripts/cleanup.sh",
+          "sha256": "c3b6b37b711bc176cdab06df01c8805f80438e37d289ca0c89617c24c93f01a3",
+          "bytes": 1146
+        },
+        {
+          "path": "scripts/compile_arp_tool.sh",
+          "sha256": "5cfa6c5ffe505b990111d8dd188e42707fcb6f45ff0bc3907803b7cd033329a0",
+          "bytes": 296
+        },
+        {
+          "path": "scripts/deploy_mitm.sh",
+          "sha256": "a2e769743835ee2c0a8b5367d3e88002a1684e2308efd5b554d3df86044e0d86",
+          "bytes": 1234
+        },
+        {
+          "path": "scripts/discover_topo.sh",
+          "sha256": "037f05ebb2ee50e5cd951248c82bc0c576d6c8da88ef85d5e617b247ade3a616",
+          "bytes": 684
+        },
+        {
+          "path": "scripts/forge_cert.sh",
+          "sha256": "0c81721ea3bbb0ebf02239491bc4c3a033b1659654bd7daefe28397a4239cc4c",
+          "bytes": 923
+        },
+        {
+          "path": "scripts/mitm_dump.py",
+          "sha256": "a3f0e24211e590ba5872a4ad49de94ae4a94d54f9e9ab811a7a6fe71d61b07fe",
+          "bytes": 1507
+        },
+        {
+          "path": "scripts/recover_weak_key.py",
+          "sha256": "afa3c89663aefd5447cd96b5c05579edc9b3e4b258e46760905968f117602128",
+          "bytes": 1460
+        },
+        {
+          "path": "scripts/run_attack.sh",
+          "sha256": "7d0e702a065ae454628e71d0ea21df06d206d85fb2102902f3c7de3e45761149",
+          "bytes": 3104
+        }
+      ]
+    }
+  ]
 }
