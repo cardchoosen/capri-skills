@@ -24,8 +24,10 @@ def build(root):
         if not folder.is_dir() or folder.is_symlink() or len(folder.name) > 64 or not ID.fullmatch(folder.name):
             raise ValueError('Invalid Skill directory')
         files, size = [], 0
-        for file in sorted(folder.rglob('*')):
+        for file in sorted(folder.rglob('*'), key=lambda p: p.relative_to(folder).as_posix()):
             relative = file.relative_to(folder).as_posix()
+            if any(ord(c) < 32 or ord(c) > 126 for c in relative):
+                raise ValueError('Public resource paths must be portable ASCII')
             if file.is_symlink() or any(p.startswith('.') or p in {'node_modules', '__pycache__'} for p in file.relative_to(folder).parts):
                 raise ValueError('Hidden, dependency or symlink resource rejected')
             if file.is_dir():
