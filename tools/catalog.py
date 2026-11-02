@@ -38,9 +38,10 @@ def build(root):
             if '\0' in text or SECRET.search(text):
                 raise ValueError('Potential secret or binary data found')
             if file.name == 'SKILL.md' and file.parent == folder:
-                if not text.startswith('---\n') or '\n---\n' not in text[4:]:
+                normalized = text.replace('\r\n', '\n')
+                if not normalized.startswith('---\n') or '\n---\n' not in normalized[4:]:
                     raise ValueError('SKILL.md requires YAML frontmatter')
-                header = text[4:].split('\n---\n', 1)[0]
+                header = normalized[4:].split('\n---\n', 1)[0]
                 if not re.search(r'^name: ?' + re.escape(folder.name) + r'\s*$', header, re.M):
                     raise ValueError('Skill name must match its portable ID')
                 description = re.search(r'^description: (.+)$', header, re.M)
